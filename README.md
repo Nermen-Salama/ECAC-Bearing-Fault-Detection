@@ -171,6 +171,7 @@ The seed-1 clean row of Table 2 should come out as 105 of 138 faulty records det
 The code is released under the license in `LICENSE`. If you use it, please cite the paper and this deposit (`CITATION.cff`).
 
 Corresponding author: Nermen Salama, nermen.salama@h-eng.helwan.edu.eg
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24462231.svg)](https://doi.org/10.5281/zenodo.24462231)
 
 
