@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this deposit."
+type: software
+title: >-
+  Code and run records for "Bearing Fault Detection by Event-Time Phase
+  Coherence with a Shaft-Harmonic Veto and a Geometry Margin Rule"
+version: 1.0.0
+date-released: 2026-11-23
+doi: 10.5281/zenodo.24462231
+license: MIT
+repository-code: "https://github.com/Nermen-Salama/ECAC-Bearing-Fault-Detection"
+authors:
+  - family-names: Salama
+    given-names: Nermen
+    email: nermen.salama@h-eng.helwan.edu.eg
+  - family-names: Bassiuny
+    given-names: A. M.
+  - family-names: Tolba
+    given-names: A. S.
+  - family-names: Meligy
+    given-names: Rowida
+keywords:
+  - bearing fault detection
+  - phase coherence
+  - Rayleigh test
+  - envelope analysis
+  - condition monitoring
+abstract: >-
+  Training-free bearing fault detector (version A15) based on the phase
+  coherence of impact-event times at the kinematic fault frequencies, with a
+  half-integer shaft-harmonic veto and a geometry margin rule, together with
+  the kurtogram envelope-comb comparator, the scoring and test scripts, and
+  the per-record run files behind every result in the paper.
