@@ -1,0 +1,4 @@
+# Versions used for the runs reported in the paper (Python 3.13.18).
+# A few synthetic runs used numpy 2.5.3 and scipy 1.18.1; their summaries say so.
+numpy==2.4.6
+scipy==1.16.3
