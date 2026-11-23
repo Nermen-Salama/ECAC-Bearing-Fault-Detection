@@ -1,0 +1,583 @@
+T11 PART E (m19) = task M11: FULL DIAGNOSTIC METRICS
+t11e_diagnostic.py caa6e27b01db | frozen: s5_paired_tests.py a99e3415ce38, t8m1_vetoed_comparator.py f30793377bbd, acquisition_batch_06.py 504e43976b69
+inputs: t4_runs e08e7121b575 | t9_runs b7fcd33e5ce9 | t4_ottawa 16a69f0cf2a5 | R8 2c06ec9628da
+comparator prior E2 (Table 2); matched = M2 exact rule on the 0.1 dB grid (bracket -> lower neighbour for matrices, both for tests)
+
+SPECIMEN MAP (M6): faulty / healthy specimens per dataset (expected in brackets)
+  CWRU        9 /   1  (9 / 1) unmapped []
+  Paderborn  23 /   6  (23 / 6) unmapped []
+  MFPT        3 /   1  (3 / 1) unmapped []
+  XJTU       13 /  13  (13 / 13) unmapped []
+
+=== CLEAN DEVELOPMENT, seed 1 (n = 196 records) ===
+  -- A15 seed 1: macro-F1 0.614 [95 % cluster-bootstrap 0.542, 0.741] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 10       1      38       1
+     BPFO                 16      47       3       4
+     Ball                  4       3       3       2
+     Normal               51       5       1       1
+     BPFI|BPFO             1       0       1       1
+     BPFI|Ball|BPFO        2       0       1       0
+     Normal  recall  51/58  0.879 [CP 0.767, 0.950] | precision  51/84  0.607 | F1 0.718
+     BPFO    recall  47/70  0.671 [CP 0.549, 0.779] | precision  47/56  0.839 | F1 0.746
+     BPFI    recall  38/50  0.760 [CP 0.618, 0.869] | precision  40/47  0.851 | F1 0.803
+     Ball    recall   2/12  0.167 [CP 0.021, 0.484] | precision   2/9   0.222 | F1 0.190
+  -- C1 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.389, 0.601] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 13       4      33       0
+     BPFO                 26      36       8       0
+     Ball                  5       3       4       0
+     Normal               44       6       7       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  44/58  0.759 [CP 0.628, 0.861] | precision  44/94  0.468 | F1 0.579
+     BPFO    recall  36/70  0.514 [CP 0.392, 0.636] | precision  36/49  0.735 | F1 0.605
+     BPFI    recall  33/50  0.660 [CP 0.512, 0.788] | precision  33/52  0.635 | F1 0.647
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/1   0.000 | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.389, 0.601] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 13       4      33       0
+     BPFO                 26      36       8       0
+     Ball                  5       3       4       0
+     Normal               44       6       7       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  44/58  0.759 [CP 0.628, 0.861] | precision  44/94  0.468 | F1 0.579
+     BPFO    recall  36/70  0.514 [CP 0.392, 0.636] | precision  36/49  0.735 | F1 0.605
+     BPFI    recall  33/50  0.660 [CP 0.512, 0.788] | precision  33/52  0.635 | F1 0.647
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/1   0.000 | F1 0.000
+  -- C1 matched 8.1 dB (exact, seed 1): macro-F1 0.452 [95 % cluster-bootstrap 0.375, 0.585] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 18       2      30       0
+     BPFO                 37      30       3       0
+     Ball                  7       3       2       0
+     Normal               51       4       3       0
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  51/58  0.879 [CP 0.767, 0.950] | precision  51/119 0.429 | F1 0.576
+     BPFO    recall  30/70  0.429 [CP 0.311, 0.553] | precision  30/39  0.769 | F1 0.550
+     BPFI    recall  30/50  0.600 [CP 0.452, 0.736] | precision  30/38  0.789 | F1 0.682
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+  -- C1V matched 8.1 dB (exact, seed 1): macro-F1 0.452 [95 % cluster-bootstrap 0.375, 0.585] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 18       2      30       0
+     BPFO                 37      30       3       0
+     Ball                  7       3       2       0
+     Normal               51       4       3       0
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  51/58  0.879 [CP 0.767, 0.950] | precision  51/119 0.429 | F1 0.576
+     BPFO    recall  30/70  0.429 [CP 0.311, 0.553] | precision  30/39  0.769 | F1 0.550
+     BPFI    recall  30/50  0.600 [CP 0.452, 0.736] | precision  30/38  0.789 | F1 0.682
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+
+=== clean CWRU, seed 1 (n = 40 records) ===
+  -- A15 seed 1: macro-F1 0.626 [95 % cluster-bootstrap 0.421, 0.823] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0       9       3       0
+     Ball                  4       3       3       2
+     Normal                4       0       0       0
+     Normal  recall   4/4   1.000 [CP 0.398, 1.000] | precision   4/8   0.500 | F1 0.667
+     BPFO    recall   9/12  0.750 [CP 0.428, 0.945] | precision   9/12  0.750 | F1 0.750
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/18  0.667 | F1 0.800
+     Ball    recall   2/12  0.167 [CP 0.021, 0.484] | precision   2/2   1.000 | F1 0.286
+  -- C1 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.293, 0.667] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0       9       3       0
+     Ball                  5       3       4       0
+     Normal                2       2       0       0
+     Normal  recall   2/4   0.500 [CP 0.068, 0.932] | precision   2/7   0.286 | F1 0.364
+     BPFO    recall   9/12  0.750 [CP 0.428, 0.945] | precision   9/14  0.643 | F1 0.692
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/19  0.632 | F1 0.774
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.293, 0.667] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0       9       3       0
+     Ball                  5       3       4       0
+     Normal                2       2       0       0
+     Normal  recall   2/4   0.500 [CP 0.068, 0.932] | precision   2/7   0.286 | F1 0.364
+     BPFO    recall   9/12  0.750 [CP 0.428, 0.945] | precision   9/14  0.643 | F1 0.692
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/19  0.632 | F1 0.774
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+
+=== clean Paderborn, seed 1 (n = 58 records) ===
+  -- A15 seed 1: macro-F1 0.740 [95 % cluster-bootstrap 0.579, 0.868] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  9       0      12       1
+     BPFO                  5      19       0       0
+     Normal               12       0       0       0
+     Normal  recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/26  0.462 | F1 0.632
+     BPFO    recall  19/24  0.792 [CP 0.578, 0.929] | precision  19/19  1.000 | F1 0.884
+     BPFI    recall  12/22  0.545 [CP 0.322, 0.756] | precision  12/12  1.000 | F1 0.706
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/1   0.000 | F1 0.000
+  -- C1 6 dB: macro-F1 0.511 [95 % cluster-bootstrap 0.336, 0.660] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  6       4      12       0
+     BPFO                  8      11       5       0
+     Normal                7       1       4       0
+     Normal  recall   7/12  0.583 [CP 0.277, 0.848] | precision   7/21  0.333 | F1 0.424
+     BPFO    recall  11/24  0.458 [CP 0.256, 0.672] | precision  11/16  0.688 | F1 0.550
+     BPFI    recall  12/22  0.545 [CP 0.322, 0.756] | precision  12/21  0.571 | F1 0.558
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.511 [95 % cluster-bootstrap 0.336, 0.660] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  6       4      12       0
+     BPFO                  8      11       5       0
+     Normal                7       1       4       0
+     Normal  recall   7/12  0.583 [CP 0.277, 0.848] | precision   7/21  0.333 | F1 0.424
+     BPFO    recall  11/24  0.458 [CP 0.256, 0.672] | precision  11/16  0.688 | F1 0.550
+     BPFI    recall  12/22  0.545 [CP 0.322, 0.756] | precision  12/21  0.571 | F1 0.558
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+
+=== clean MFPT, seed 1 (n = 20 records) ===
+  -- A15 seed 1: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1 6 dB: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+
+=== clean XJTU, seed 1 (n = 78 records) ===
+  -- A15 seed 1: macro-F1 0.680 [95 % cluster-bootstrap 0.539, 0.778] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  1       1       7       0
+     BPFO                 11       9       0       4
+     Normal               32       5       1       1
+     BPFI|BPFO             1       0       1       1
+     BPFI|Ball|BPFO        2       0       1       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/47  0.681 | F1 0.744
+     BPFO    recall   9/24  0.375 [CP 0.188, 0.594] | precision   9/15  0.600 | F1 0.462
+     BPFI    recall   7/9   0.778 [CP 0.400, 0.972] | precision   9/10  0.900 | F1 0.834
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/6   0.000 | F1 0.000
+  -- C1 6 dB: macro-F1 0.426 [95 % cluster-bootstrap 0.281, 0.550] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  7       0       2       0
+     BPFO                 18       6       0       0
+     Normal               32       3       3       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/63  0.508 | F1 0.627
+     BPFO    recall   6/24  0.250 [CP 0.098, 0.467] | precision   6/9   0.667 | F1 0.364
+     BPFI    recall   2/9   0.222 [CP 0.028, 0.600] | precision   2/5   0.400 | F1 0.286
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/1   0.000 | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.426 [95 % cluster-bootstrap 0.281, 0.550] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  7       0       2       0
+     BPFO                 18       6       0       0
+     Normal               32       3       3       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/63  0.508 | F1 0.627
+     BPFO    recall   6/24  0.250 [CP 0.098, 0.467] | precision   6/9   0.667 | F1 0.364
+     BPFI    recall   2/9   0.222 [CP 0.028, 0.600] | precision   2/5   0.400 | F1 0.286
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/1   0.000 | F1 0.000
+
+=== OTTAWA A, seed 1 (n = 50 records) ===
+  -- A15 seed 1: macro-F1 0.351 [95 % cluster-bootstrap 0.204, 0.481] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  1       0       1       8
+     BPFO                  2       7       1       0
+     Ball                  2       4       1       3
+     Normal                8       4       5       3
+     Normal  recall   8/20  0.400 [CP 0.191, 0.639] | precision   8/13  0.615 | F1 0.485
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/15  0.467 | F1 0.560
+     BPFI    recall   1/10  0.100 [CP 0.003, 0.445] | precision   1/8   0.125 | F1 0.111
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/14  0.214 | F1 0.250
+  -- C1 6 dB: macro-F1 0.285 [95 % cluster-bootstrap 0.154, 0.396] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  2       2       0       6
+     Normal                4      10       0       6
+     Normal  recall   4/20  0.200 [CP 0.057, 0.437] | precision   4/8   0.500 | F1 0.286
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/20  0.350 | F1 0.467
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/1   0.000 | F1 0.000
+     Ball    recall   6/10  0.600 [CP 0.262, 0.878] | precision   6/21  0.286 | F1 0.387
+  -- C1-V 6 dB: macro-F1 0.235 [95 % cluster-bootstrap 0.114, 0.346] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  5       2       0       3
+     Normal                4      11       1       4
+     Normal  recall   4/20  0.200 [CP 0.057, 0.437] | precision   4/11  0.364 | F1 0.258
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/21  0.333 | F1 0.452
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/2   0.000 | F1 0.000
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/16  0.188 | F1 0.231
+  -- C1 matched 7.4 dB: macro-F1 0.319 [95 % cluster-bootstrap 0.188, 0.428] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  4       2       0       4
+     Normal                8       7       0       5
+     Normal  recall   8/20  0.400 [CP 0.191, 0.639] | precision   8/14  0.571 | F1 0.471
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/17  0.412 | F1 0.519
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/1   0.000 | F1 0.000
+     Ball    recall   4/10  0.400 [CP 0.122, 0.738] | precision   4/18  0.222 | F1 0.286
+  -- C1V matched 7.0 dB: macro-F1 0.302 [95 % cluster-bootstrap 0.168, 0.419] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  5       2       0       3
+     Normal                8       7       1       4
+     Normal  recall   8/20  0.400 [CP 0.191, 0.639] | precision   8/15  0.533 | F1 0.457
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/17  0.412 | F1 0.519
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/2   0.000 | F1 0.000
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/16  0.188 | F1 0.231
+
+=== CLEAN DEVELOPMENT, seed 2 (n = 196 records) ===
+  -- A15 seed 2: macro-F1 0.601 [95 % cluster-bootstrap 0.525, 0.712] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 13       2      35       0
+     BPFO                 16      48       2       4
+     Ball                  4       4       2       2
+     Normal               50       5       2       1
+     BPFI|BPFO             2       0       0       1
+     BPFI|Ball|BPFO        2       0       1       0
+     Normal  recall  50/58  0.862 [CP 0.746, 0.939] | precision  50/87  0.575 | F1 0.690
+     BPFO    recall  48/70  0.686 [CP 0.564, 0.791] | precision  48/59  0.814 | F1 0.744
+     BPFI    recall  35/50  0.700 [CP 0.554, 0.821] | precision  36/42  0.857 | F1 0.771
+     Ball    recall   2/12  0.167 [CP 0.021, 0.484] | precision   2/8   0.250 | F1 0.200
+  -- C1 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.386, 0.594] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 13       4      33       0
+     BPFO                 26      36       8       0
+     Ball                  5       3       4       0
+     Normal               44       6       7       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  44/58  0.759 [CP 0.628, 0.861] | precision  44/94  0.468 | F1 0.579
+     BPFO    recall  36/70  0.514 [CP 0.392, 0.636] | precision  36/49  0.735 | F1 0.605
+     BPFI    recall  33/50  0.660 [CP 0.512, 0.788] | precision  33/52  0.635 | F1 0.647
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/1   0.000 | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.386, 0.594] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 13       4      33       0
+     BPFO                 26      36       8       0
+     Ball                  5       3       4       0
+     Normal               44       6       7       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  44/58  0.759 [CP 0.628, 0.861] | precision  44/94  0.468 | F1 0.579
+     BPFO    recall  36/70  0.514 [CP 0.392, 0.636] | precision  36/49  0.735 | F1 0.605
+     BPFI    recall  33/50  0.660 [CP 0.512, 0.788] | precision  33/52  0.635 | F1 0.647
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/1   0.000 | F1 0.000
+  -- C1 matched 7.6 dB (exact, seed 2): macro-F1 0.454 [95 % cluster-bootstrap 0.372, 0.574] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 18       2      30       0
+     BPFO                 34      32       4       0
+     Ball                  6       3       3       0
+     Normal               50       4       4       0
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  50/58  0.862 [CP 0.746, 0.939] | precision  50/114 0.439 | F1 0.581
+     BPFO    recall  32/70  0.457 [CP 0.337, 0.581] | precision  32/41  0.780 | F1 0.577
+     BPFI    recall  30/50  0.600 [CP 0.452, 0.736] | precision  30/41  0.732 | F1 0.659
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+  -- C1V matched 7.6 dB (exact, seed 2): macro-F1 0.454 [95 % cluster-bootstrap 0.372, 0.574] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 18       2      30       0
+     BPFO                 34      32       4       0
+     Ball                  6       3       3       0
+     Normal               50       4       4       0
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  50/58  0.862 [CP 0.746, 0.939] | precision  50/114 0.439 | F1 0.581
+     BPFO    recall  32/70  0.457 [CP 0.337, 0.581] | precision  32/41  0.780 | F1 0.577
+     BPFI    recall  30/50  0.600 [CP 0.452, 0.736] | precision  30/41  0.732 | F1 0.659
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+
+=== clean CWRU, seed 2 (n = 40 records) ===
+  -- A15 seed 2: macro-F1 0.607 [95 % cluster-bootstrap 0.458, 0.831] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0      10       2       0
+     Ball                  4       4       2       2
+     Normal                3       1       0       0
+     Normal  recall   3/4   0.750 [CP 0.194, 0.994] | precision   3/7   0.429 | F1 0.545
+     BPFO    recall  10/12  0.833 [CP 0.516, 0.979] | precision  10/15  0.667 | F1 0.741
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/16  0.750 | F1 0.857
+     Ball    recall   2/12  0.167 [CP 0.021, 0.484] | precision   2/2   1.000 | F1 0.286
+  -- C1 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.294, 0.705] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0       9       3       0
+     Ball                  5       3       4       0
+     Normal                2       2       0       0
+     Normal  recall   2/4   0.500 [CP 0.068, 0.932] | precision   2/7   0.286 | F1 0.364
+     BPFO    recall   9/12  0.750 [CP 0.428, 0.945] | precision   9/14  0.643 | F1 0.692
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/19  0.632 | F1 0.774
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.458 [95 % cluster-bootstrap 0.294, 0.705] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0      12       0
+     BPFO                  0       9       3       0
+     Ball                  5       3       4       0
+     Normal                2       2       0       0
+     Normal  recall   2/4   0.500 [CP 0.068, 0.932] | precision   2/7   0.286 | F1 0.364
+     BPFO    recall   9/12  0.750 [CP 0.428, 0.945] | precision   9/14  0.643 | F1 0.692
+     BPFI    recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/19  0.632 | F1 0.774
+     Ball    recall   0/12  0.000 [CP 0.000, 0.265] | precision   0/0   nan | F1 0.000
+
+=== clean Paderborn, seed 2 (n = 58 records) ===
+  -- A15 seed 2: macro-F1 0.710 [95 % cluster-bootstrap 0.526, 0.860] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                 11       1      10       0
+     BPFO                  4      20       0       0
+     Normal               12       0       0       0
+     Normal  recall  12/12  1.000 [CP 0.735, 1.000] | precision  12/27  0.444 | F1 0.615
+     BPFO    recall  20/24  0.833 [CP 0.626, 0.953] | precision  20/21  0.952 | F1 0.889
+     BPFI    recall  10/22  0.455 [CP 0.244, 0.678] | precision  10/10  1.000 | F1 0.625
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1 6 dB: macro-F1 0.511 [95 % cluster-bootstrap 0.338, 0.660] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  6       4      12       0
+     BPFO                  8      11       5       0
+     Normal                7       1       4       0
+     Normal  recall   7/12  0.583 [CP 0.277, 0.848] | precision   7/21  0.333 | F1 0.424
+     BPFO    recall  11/24  0.458 [CP 0.256, 0.672] | precision  11/16  0.688 | F1 0.550
+     BPFI    recall  12/22  0.545 [CP 0.322, 0.756] | precision  12/21  0.571 | F1 0.558
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.511 [95 % cluster-bootstrap 0.338, 0.660] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  6       4      12       0
+     BPFO                  8      11       5       0
+     Normal                7       1       4       0
+     Normal  recall   7/12  0.583 [CP 0.277, 0.848] | precision   7/21  0.333 | F1 0.424
+     BPFO    recall  11/24  0.458 [CP 0.256, 0.672] | precision  11/16  0.688 | F1 0.550
+     BPFI    recall  12/22  0.545 [CP 0.322, 0.756] | precision  12/21  0.571 | F1 0.558
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+
+=== clean MFPT, seed 2 (n = 20 records) ===
+  -- A15 seed 2: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1 6 dB: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+  -- C1-V 6 dB: macro-F1 1.000 [95 % cluster-bootstrap 1.000, 1.000] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       0       7       0
+     BPFO                  0      10       0       0
+     Normal                3       0       0       0
+     Normal  recall   3/3   1.000 [CP 0.292, 1.000] | precision   3/3   1.000 | F1 1.000
+     BPFO    recall  10/10  1.000 [CP 0.692, 1.000] | precision  10/10  1.000 | F1 1.000
+     BPFI    recall   7/7   1.000 [CP 0.590, 1.000] | precision   7/7   1.000 | F1 1.000
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/0   nan | F1 0.000
+
+=== clean XJTU, seed 2 (n = 78 records) ===
+  -- A15 seed 2: macro-F1 0.623 [95 % cluster-bootstrap 0.478, 0.735] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  2       1       6       0
+     BPFO                 12       8       0       4
+     Normal               32       4       2       1
+     BPFI|BPFO             2       0       0       1
+     BPFI|Ball|BPFO        2       0       1       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/50  0.640 | F1 0.719
+     BPFO    recall   8/24  0.333 [CP 0.156, 0.553] | precision   8/13  0.615 | F1 0.432
+     BPFI    recall   6/9   0.667 [CP 0.299, 0.925] | precision   7/9   0.778 | F1 0.718
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/6   0.000 | F1 0.000
+  -- C1 6 dB: macro-F1 0.426 [95 % cluster-bootstrap 0.282, 0.551] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  7       0       2       0
+     BPFO                 18       6       0       0
+     Normal               32       3       3       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/63  0.508 | F1 0.627
+     BPFO    recall   6/24  0.250 [CP 0.098, 0.467] | precision   6/9   0.667 | F1 0.364
+     BPFI    recall   2/9   0.222 [CP 0.028, 0.600] | precision   2/5   0.400 | F1 0.286
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/1   0.000 | F1 0.000
+  -- C1-V 6 dB: macro-F1 0.426 [95 % cluster-bootstrap 0.282, 0.551] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  7       0       2       0
+     BPFO                 18       6       0       0
+     Normal               32       3       3       1
+     BPFI|BPFO             3       0       0       0
+     BPFI|Ball|BPFO        3       0       0       0
+     Normal  recall  32/39  0.821 [CP 0.665, 0.925] | precision  32/63  0.508 | F1 0.627
+     BPFO    recall   6/24  0.250 [CP 0.098, 0.467] | precision   6/9   0.667 | F1 0.364
+     BPFI    recall   2/9   0.222 [CP 0.028, 0.600] | precision   2/5   0.400 | F1 0.286
+     Ball    recall   0/0   nan [CP nan, nan] | precision   0/1   0.000 | F1 0.000
+
+=== OTTAWA A, seed 2 (n = 50 records) ===
+  -- A15 seed 2: macro-F1 0.389 [95 % cluster-bootstrap 0.219, 0.533] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  1       0       3       6
+     BPFO                  2       7       1       0
+     Ball                  2       4       1       3
+     Normal                7       4       6       3
+     Normal  recall   7/20  0.350 [CP 0.154, 0.592] | precision   7/12  0.583 | F1 0.438
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/15  0.467 | F1 0.560
+     BPFI    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/11  0.273 | F1 0.286
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/12  0.250 | F1 0.273
+  -- C1 6 dB: macro-F1 0.285 [95 % cluster-bootstrap 0.157, 0.394] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  2       2       0       6
+     Normal                4      10       0       6
+     Normal  recall   4/20  0.200 [CP 0.057, 0.437] | precision   4/8   0.500 | F1 0.286
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/20  0.350 | F1 0.467
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/1   0.000 | F1 0.000
+     Ball    recall   6/10  0.600 [CP 0.262, 0.878] | precision   6/21  0.286 | F1 0.387
+  -- C1-V 6 dB: macro-F1 0.235 [95 % cluster-bootstrap 0.113, 0.345] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  5       2       0       3
+     Normal                4      11       1       4
+     Normal  recall   4/20  0.200 [CP 0.057, 0.437] | precision   4/11  0.364 | F1 0.258
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/21  0.333 | F1 0.452
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/2   0.000 | F1 0.000
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/16  0.188 | F1 0.231
+  -- C1 matched 7.0 dB: macro-F1 0.305 [95 % cluster-bootstrap 0.173, 0.413] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  4       2       0       4
+     Normal                7       7       0       6
+     Normal  recall   7/20  0.350 [CP 0.154, 0.592] | precision   7/13  0.538 | F1 0.424
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/17  0.412 | F1 0.519
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/1   0.000 | F1 0.000
+     Ball    recall   4/10  0.400 [CP 0.122, 0.738] | precision   4/19  0.211 | F1 0.276
+  -- C1V matched 6.5 dB: macro-F1 0.286 [95 % cluster-bootstrap 0.156, 0.399] --
+     true \ pred     Normal    BPFO    BPFI    Ball
+     BPFI                  0       1       0       9
+     BPFO                  2       7       1       0
+     Ball                  5       2       0       3
+     Normal                7       8       1       4
+     Normal  recall   7/20  0.350 [CP 0.154, 0.592] | precision   7/14  0.500 | F1 0.412
+     BPFO    recall   7/10  0.700 [CP 0.348, 0.933] | precision   7/18  0.389 | F1 0.500
+     BPFI    recall   0/10  0.000 [CP 0.000, 0.308] | precision   0/2   0.000 | F1 0.000
+     Ball    recall   3/10  0.300 [CP 0.067, 0.652] | precision   3/16  0.188 | F1 0.231
+
+=== PAIRED CORRECT-TYPE TEST (faulty records; b' = A15 correct type & comparator not; c' = reverse) ===
+  -- C1V | seed 1 | M2 exact --
+    clean       t  8.1 | correct type A15  89 vs  60 /138 | b' 32 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +29 (25 nonzero) p 0.0001 Holm 0.0003 (sig)
+        6       t  7.7 | correct type A15  81 vs  57 /138 | b' 25 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +24 (17 nonzero) p 0.0001 Holm 0.0007 (sig)
+        3       t  7.3 | correct type A15  78 vs  58 /138 | b' 21 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +20 (17 nonzero) p 0.0002 Holm 0.0008 (sig)
+        0       t  5.8 | correct type A15  63 vs  61 /138 | b' 10 c'  8 p 0.8145 Holm 0.8145 -> not supported | specimen T +2 (15 nonzero) p 0.8416 Holm 0.8416 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  5.7 | correct type A15  59 vs  55 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+  -- C1V | seed 1 | S5 4/6/8 --
+    clean       t  8.0 | correct type A15  89 vs  60 /138 | b' 32 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +29 (25 nonzero) p 0.0001 Holm 0.0003 (sig)
+        6       t  8.0 | correct type A15  81 vs  56 /138 | b' 26 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (18 nonzero) p 0.0001 Holm 0.0004 (sig)
+        3       t  8.0 | correct type A15  78 vs  58 /138 | b' 21 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +20 (17 nonzero) p 0.0002 Holm 0.0008 (sig)
+        0       t  6.0 | correct type A15  63 vs  60 /138 | b' 10 c'  7 p 0.6291 Holm 0.6291 -> not supported | specimen T +3 (15 nonzero) p 0.6683 Holm 0.6683 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  6.0 | correct type A15  59 vs  54 /138 | b'  7 c'  2 p 0.1797 Holm 0.3594 -> not supported | specimen T +5 (8 nonzero) p 0.2344 Holm 0.4688 
+  -- C1V | seed 1 | fixed 6 dB --
+    clean       t  6.0 | correct type A15  89 vs  69 /138 | b' 28 c'  8 p 0.0012 Holm 0.0048 -> SUPPORTED | specimen T +20 (25 nonzero) p 0.0077 Holm 0.0309 (sig)
+        6       t  6.0 | correct type A15  81 vs  62 /138 | b' 21 c'  2 p 0.0001 Holm 0.0004 -> SUPPORTED | specimen T +19 (16 nonzero) p 0.0016 Holm 0.0081 (sig)
+        3       t  6.0 | correct type A15  78 vs  60 /138 | b' 20 c'  2 p 0.0001 Holm 0.0006 -> SUPPORTED | specimen T +18 (15 nonzero) p 0.0007 Holm 0.0040 (sig)
+        0       t  6.0 | correct type A15  63 vs  60 /138 | b' 10 c'  7 p 0.6291 Holm 0.6291 -> not supported | specimen T +3 (15 nonzero) p 0.6683 Holm 0.6683 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  6.0 | correct type A15  59 vs  54 /138 | b'  7 c'  2 p 0.1797 Holm 0.3594 -> not supported | specimen T +5 (8 nonzero) p 0.2344 Holm 0.4688 
+  -- C1V | seed 2 | M2 exact --
+    clean       t  7.6 | correct type A15  86 vs  62 /138 | b' 27 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +24 (17 nonzero) p 0.0016 Holm 0.0065 (sig)
+        6       t  8.2 | correct type A15  81 vs  56 /138 | b' 27 c'  2 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (20 nonzero) p 0.0001 Holm 0.0009 (sig)
+        3       t  7.4 | correct type A15  77 vs  58 /138 | b' 20 c'  1 p 0.0000 Holm 0.0001 -> SUPPORTED | specimen T +19 (14 nonzero) p 0.0010 Holm 0.0049 (sig)
+        0 lower t  8.4 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+        0 upper t  8.3 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+       -3 lower t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -3 upper t  5.9 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  5.1 | correct type A15  58 vs  56 /138 | b'  6 c'  4 p 0.7539 Holm 0.7539 -> not supported | specimen T +2 (10 nonzero) p 0.7539 Holm 0.7969 
+  -- C1V | seed 2 | S5 4/6/8 --
+    clean       t  8.0 | correct type A15  86 vs  60 /138 | b' 29 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +26 (19 nonzero) p 0.0007 Holm 0.0034 (sig)
+        6       t  8.0 | correct type A15  81 vs  56 /138 | b' 27 c'  2 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (20 nonzero) p 0.0001 Holm 0.0009 (sig)
+        3       t  8.0 | correct type A15  77 vs  58 /138 | b' 20 c'  1 p 0.0000 Holm 0.0001 -> SUPPORTED | specimen T +19 (14 nonzero) p 0.0010 Holm 0.0039 (sig)
+        0       t  8.0 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+       -3       t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  6.0 | correct type A15  58 vs  54 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+  -- C1V | seed 2 | fixed 6 dB --
+    clean       t  6.0 | correct type A15  86 vs  69 /138 | b' 25 c'  8 p 0.0046 Holm 0.0182 -> SUPPORTED | specimen T +17 (21 nonzero) p 0.0350 Holm 0.1402 
+        6       t  6.0 | correct type A15  81 vs  62 /138 | b' 23 c'  4 p 0.0003 Holm 0.0016 -> SUPPORTED | specimen T +19 (19 nonzero) p 0.0043 Holm 0.0215 (sig)
+        3       t  6.0 | correct type A15  77 vs  60 /138 | b' 18 c'  1 p 0.0001 Holm 0.0005 -> SUPPORTED | specimen T +17 (13 nonzero) p 0.0020 Holm 0.0117 (sig)
+        0       t  6.0 | correct type A15  66 vs  60 /138 | b' 12 c'  6 p 0.2379 Holm 0.7137 -> not supported | specimen T +6 (12 nonzero) p 0.2437 Holm 0.7310 
+       -3       t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.7137 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  6.0 | correct type A15  58 vs  54 /138 | b'  7 c'  3 p 0.3438 Holm 0.7137 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+  -- C1 | seed 1 | M2 exact --
+    clean       t  8.1 | correct type A15  89 vs  60 /138 | b' 32 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +29 (25 nonzero) p 0.0001 Holm 0.0003 (sig)
+        6       t  7.7 | correct type A15  81 vs  57 /138 | b' 25 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +24 (17 nonzero) p 0.0001 Holm 0.0007 (sig)
+        3       t  7.3 | correct type A15  78 vs  58 /138 | b' 21 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +20 (17 nonzero) p 0.0002 Holm 0.0008 (sig)
+        0       t  5.8 | correct type A15  63 vs  61 /138 | b' 10 c'  8 p 0.8145 Holm 0.8145 -> not supported | specimen T +2 (15 nonzero) p 0.8416 Holm 0.8416 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  5.7 | correct type A15  59 vs  55 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+  -- C1 | seed 1 | S5 4/6/8 --
+    clean       t  8.0 | correct type A15  89 vs  60 /138 | b' 32 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +29 (25 nonzero) p 0.0001 Holm 0.0003 (sig)
+        6       t  8.0 | correct type A15  81 vs  56 /138 | b' 26 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (18 nonzero) p 0.0001 Holm 0.0004 (sig)
+        3       t  8.0 | correct type A15  78 vs  58 /138 | b' 21 c'  1 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +20 (17 nonzero) p 0.0002 Holm 0.0008 (sig)
+        0       t  6.0 | correct type A15  63 vs  60 /138 | b' 10 c'  7 p 0.6291 Holm 0.6291 -> not supported | specimen T +3 (15 nonzero) p 0.6683 Holm 0.6683 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  6.0 | correct type A15  59 vs  54 /138 | b'  7 c'  2 p 0.1797 Holm 0.3594 -> not supported | specimen T +5 (8 nonzero) p 0.2344 Holm 0.4688 
+  -- C1 | seed 1 | fixed 6 dB --
+    clean       t  6.0 | correct type A15  89 vs  69 /138 | b' 28 c'  8 p 0.0012 Holm 0.0048 -> SUPPORTED | specimen T +20 (25 nonzero) p 0.0077 Holm 0.0309 (sig)
+        6       t  6.0 | correct type A15  81 vs  62 /138 | b' 21 c'  2 p 0.0001 Holm 0.0004 -> SUPPORTED | specimen T +19 (16 nonzero) p 0.0016 Holm 0.0081 (sig)
+        3       t  6.0 | correct type A15  78 vs  60 /138 | b' 20 c'  2 p 0.0001 Holm 0.0006 -> SUPPORTED | specimen T +18 (15 nonzero) p 0.0007 Holm 0.0040 (sig)
+        0       t  6.0 | correct type A15  63 vs  60 /138 | b' 10 c'  7 p 0.6291 Holm 0.6291 -> not supported | specimen T +3 (15 nonzero) p 0.6683 Holm 0.6683 
+       -3       t  6.0 | correct type A15  65 vs  57 /138 | b' 12 c'  4 p 0.0768 Holm 0.2304 -> not supported | specimen T +8 (13 nonzero) p 0.0762 Holm 0.2285 
+       -6       t  6.0 | correct type A15  59 vs  54 /138 | b'  7 c'  2 p 0.1797 Holm 0.3594 -> not supported | specimen T +5 (8 nonzero) p 0.2344 Holm 0.4688 
+  -- C1 | seed 2 | M2 exact --
+    clean       t  7.6 | correct type A15  86 vs  62 /138 | b' 27 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +24 (17 nonzero) p 0.0016 Holm 0.0065 (sig)
+        6       t  8.2 | correct type A15  81 vs  56 /138 | b' 27 c'  2 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (20 nonzero) p 0.0001 Holm 0.0009 (sig)
+        3       t  7.4 | correct type A15  77 vs  58 /138 | b' 20 c'  1 p 0.0000 Holm 0.0001 -> SUPPORTED | specimen T +19 (14 nonzero) p 0.0010 Holm 0.0049 (sig)
+        0 lower t  8.4 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+        0 upper t  8.3 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+       -3 lower t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -3 upper t  5.9 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  5.1 | correct type A15  58 vs  56 /138 | b'  6 c'  4 p 0.7539 Holm 0.7539 -> not supported | specimen T +2 (10 nonzero) p 0.7539 Holm 0.7969 
+  -- C1 | seed 2 | S5 4/6/8 --
+    clean       t  8.0 | correct type A15  86 vs  60 /138 | b' 29 c'  3 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +26 (19 nonzero) p 0.0007 Holm 0.0034 (sig)
+        6       t  8.0 | correct type A15  81 vs  56 /138 | b' 27 c'  2 p 0.0000 Holm 0.0000 -> SUPPORTED | specimen T +25 (20 nonzero) p 0.0001 Holm 0.0009 (sig)
+        3       t  8.0 | correct type A15  77 vs  58 /138 | b' 20 c'  1 p 0.0000 Holm 0.0001 -> SUPPORTED | specimen T +19 (14 nonzero) p 0.0010 Holm 0.0039 (sig)
+        0       t  8.0 | correct type A15  66 vs  56 /138 | b' 12 c'  2 p 0.0129 Holm 0.0388 -> SUPPORTED | specimen T +10 (10 nonzero) p 0.0176 Holm 0.0527 
+       -3       t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  6.0 | correct type A15  58 vs  54 /138 | b'  7 c'  3 p 0.3438 Holm 0.6875 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+  -- C1 | seed 2 | fixed 6 dB --
+    clean       t  6.0 | correct type A15  86 vs  69 /138 | b' 25 c'  8 p 0.0046 Holm 0.0182 -> SUPPORTED | specimen T +17 (21 nonzero) p 0.0350 Holm 0.1402 
+        6       t  6.0 | correct type A15  81 vs  62 /138 | b' 23 c'  4 p 0.0003 Holm 0.0016 -> SUPPORTED | specimen T +19 (19 nonzero) p 0.0043 Holm 0.0215 (sig)
+        3       t  6.0 | correct type A15  77 vs  60 /138 | b' 18 c'  1 p 0.0001 Holm 0.0005 -> SUPPORTED | specimen T +17 (13 nonzero) p 0.0020 Holm 0.0117 (sig)
+        0       t  6.0 | correct type A15  66 vs  60 /138 | b' 12 c'  6 p 0.2379 Holm 0.7137 -> not supported | specimen T +6 (12 nonzero) p 0.2437 Holm 0.7310 
+       -3       t  6.0 | correct type A15  61 vs  57 /138 | b'  7 c'  3 p 0.3438 Holm 0.7137 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+       -6       t  6.0 | correct type A15  58 vs  54 /138 | b'  7 c'  3 p 0.3438 Holm 0.7137 -> not supported | specimen T +4 (9 nonzero) p 0.3984 Holm 0.7969 
+
+READING (fixed in advance; record-level McNemar, Holm, decision rows clean/+6/+3, both seeds; primary matching = M2 exact):
+  C1V: clean: s1 True, s2 True | 6: s1 True, s2 True | 3: s1 True, s2 True -> DIAGNOSIS CLAIM SUPPORTED (detector also types better at matched FA)
+  C1: clean: s1 True, s2 True | 6: s1 True, s2 True | 3: s1 True, s2 True -> DIAGNOSIS CLAIM SUPPORTED (detector also types better at matched FA)
+  macro-F1: reported with intervals; no claim of difference unless the paired test supports it.

@@ -1,0 +1,15 @@
+=== WRONG CLASS: CWRU 118 | true Ball | rpm 1797 | rpm_quality nominal | geometry CWRU_6205 | seed 1 (rng default_rng(17)) | verdict BPFO (T4 BPFO) | fr refined 29.9257 Hz ===
+    BPFO  R=0.923 z= 11.5/thr 3.6 @ +0.38% (band 2750 Hz, BPFO, duty=0.35) PASS
+    BPFI  R=0.600 z=  3.7/thr 3.5 @ -0.33% (band 3750 Hz, BPFI, duty=0.58) PASS
+    Ball  R=0.784 z=  9.0/thr 4.0 @ -2.43% (band 2000 Hz, 2xBSF, duty=0.52) ----
+    -> BPFO (conf 0.88) [5.0s]  fr=29.926 (-0.08% vs prior)  multi-pass=['BPFO', 'BPFI']
+  stages: BPFO: PASSED (z 11.46 > thr 3.65, off +0.38 %, lattice none) | BPFI: PASSED (z 3.68 > thr 3.53, off -0.33 %, lattice none) | Ball: rejected by slip bound: |off| 2.43 % > 1.0 %
+  decided by: called BPFO because it passed and is the strongest pass; the true class Ball: rejected by slip bound: |off| 2.43 % > 1.0 %
+
+=== MISSED FAULT: Paderborn KA05_M07 | true BPFO | rpm 1499.7121661521621 | rpm_quality measured | geometry Paderborn_6203 | seed 1 (rng default_rng(60)) | verdict Normal (T4 Normal) | fr refined 25.0452 Hz ===
+    BPFO  R=0.857 z=  3.7/thr 4.3 @ -0.25% (band 8250 Hz, BPFO, duty=0.22) ----
+    BPFI  R=0.650 z=  1.9/thr 5.0 @ +0.01% (band 5000 Hz, BPFI, duty=0.30) ----
+    Ball  R=0.578 z=  2.6/thr 4.4 @ -0.11% (band 2250 Hz, 2xBSF, duty=0.24, LATTICE:veto) ----
+    -> Normal (conf 0.66) [30.4s]  fr=25.045 (+0.20% vs prior)  multi-pass=no
+  stages: BPFO: rejected by gate: z 3.70 <= thr 4.33 | BPFI: rejected by gate: z 1.90 <= thr 5.01 | Ball: rejected by gate: z 2.64 <= thr 4.39; lattice veto (half-integer shaft order)
+  decided by: true class BPFO: rejected by gate: z 3.70 <= thr 4.33; decided by: no family passed; per family: BPFO: rejected by gate: z 3.70 <= thr 4.33 | BPFI: rejected by gate: z 1.90 <= thr 5.01 | Ball: rejected by gate: z 2.64 <= thr 4.39; lattice veto (half-integer shaft order)

@@ -1,0 +1,158 @@
+T11 PART C (M5) - CEPSTRUM-PRE-WHITENED COMPARATOR C2 / C2-V, part dev
+t11c_cpw_comparator.py 9d07dc4da9fb | python 3.13.18 numpy 2.4.6 scipy 1.16.3 | host 939f005bb5a2 | run time this call 130.3 min
+hashes asserted: t8_comp_record.py 0893b1ccf2c5, t8m1_vetoed_comparator.py f30793377bbd, s5_paired_tests.py a99e3415ce38, t6b_synthetic.py 9507a4ec83be, t4_a15_verify.py 68dfb70dd4f3, acquisition_batch_06.py 504e43976b69, classical_baseline_03.py d69e9ce56f70, c1_classical_noveto.py 0670f27eb3e3 (+ the T4 / t3_common frozen lists)
+PATCH: classical_baseline_03.kurtogram_band wrapped for the comparator call only; input x -> real(IFFT(X / max(|X|, 1e-12 max|X|))); speed refinement on the raw signal (unchanged); E2 via t3a comparator_tol inside t8_comp_record.record.
+HARNESS H1 whitening OFF = C1 (R8 E1 clean rows: cls_noveto_4/6/8 + SNR 3 dp): 196/196 records; mismatch/missing []
+HARNESS H2 record 97: |X| range 4.482e-03 .. 1.468e+03 -> whitened |FFT(x_w)| range 1.000000000000 .. 1.000000000000; max | |FFT(x_w)| - 1 | = 3.44e-15 over 60984 bins (1 eps-floored bins excluded); limit 1e-9
+C2 runs 1624/1624 | errors 0
+HARNESS: PASS
+inputs: t4_runs e08e7121b575 | t9_runs b7fcd33e5ce9 | t4_ottawa 16a69f0cf2a5 | R8 2c06ec9628da
+
+=== TABLE 2 | comparator C2V | prior E2 (PRIMARY) | seed 1 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.9         det 105 vs  68 /138 (b 40, c  3, p 0.0000 Holm 0.0000) | FA   7 vs   7 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.3         det  91 vs  71 /138 (b 26, c  6, p 0.0005 Holm 0.0021) | FA   9 vs   9 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.2         det  89 vs  66 /138 (b 29, c  6, p 0.0001 Holm 0.0006) | FA   5 vs   5 / 58 (b  3, c  3, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  6.7         det  74 vs  61 /138 (b 19, c  6, p 0.0146 Holm 0.0439) | FA   5 vs   5 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.8         det  72 vs  60 /138 (b 19, c  7, p 0.0290 Holm 0.0579) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 exact t  5.3         det  65 vs  57 /138 (b 18, c 10, p 0.1849 Holm 0.1849) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2V | prior E2 (PRIMARY) | seed 2 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.7         det 101 vs  70 /138 (b 38, c  7, p 0.0000 Holm 0.0000) | FA   8 vs   8 / 58 (b  7, c  7, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.9         det  92 vs  70 /138 (b 29, c  7, p 0.0003 Holm 0.0013) | FA   8 vs   8 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.5         det  89 vs  66 /138 (b 29, c  6, p 0.0001 Holm 0.0006) | FA   4 vs   4 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  7.4         det  75 vs  60 /138 (b 21, c  6, p 0.0059 Holm 0.0178) | FA   1 vs   1 / 58 (b  1, c  1, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.6         det  70 vs  62 /138 (b 17, c  9, p 0.1686 Holm 0.3373) | FA   3 vs   3 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 exact t  4.7         det  64 vs  66 /138 (b 16, c 18, p 0.8642 Holm 0.8642) | FA   6 vs   6 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2 | prior E2 (PRIMARY) | seed 1 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.9         det 105 vs  68 /138 (b 40, c  3, p 0.0000 Holm 0.0000) | FA   7 vs   7 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.3         det  91 vs  71 /138 (b 26, c  6, p 0.0005 Holm 0.0021) | FA   9 vs   9 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.2         det  89 vs  66 /138 (b 29, c  6, p 0.0001 Holm 0.0006) | FA   5 vs   5 / 58 (b  3, c  3, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  6.7         det  74 vs  61 /138 (b 19, c  6, p 0.0146 Holm 0.0439) | FA   5 vs   5 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.8         det  72 vs  60 /138 (b 19, c  7, p 0.0290 Holm 0.0579) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 exact t  5.3         det  65 vs  58 /138 (b 17, c 10, p 0.2478 Holm 0.2478) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2 | prior E2 (PRIMARY) | seed 2 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.7         det 101 vs  70 /138 (b 38, c  7, p 0.0000 Holm 0.0000) | FA   8 vs   8 / 58 (b  7, c  7, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.9         det  92 vs  70 /138 (b 29, c  7, p 0.0003 Holm 0.0013) | FA   8 vs   8 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.5         det  89 vs  66 /138 (b 29, c  6, p 0.0001 Holm 0.0006) | FA   4 vs   4 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  7.4         det  75 vs  60 /138 (b 21, c  6, p 0.0059 Holm 0.0178) | FA   1 vs   1 / 58 (b  1, c  1, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.6         det  70 vs  62 /138 (b 17, c  9, p 0.1686 Holm 0.3373) | FA   3 vs   3 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 exact t  4.7         det  64 vs  67 /138 (b 15, c 18, p 0.7283 Holm 0.7283) | FA   6 vs   6 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2V | prior E1 (sensitivity) | seed 1 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.8         det 105 vs  66 /138 (b 42, c  3, p 0.0000 Holm 0.0000) | FA   7 vs   7 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.3         det  91 vs  68 /138 (b 28, c  5, p 0.0001 Holm 0.0003) | FA   9 vs   9 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.3         det  89 vs  64 /138 (b 31, c  6, p 0.0000 Holm 0.0002) | FA   5 vs   5 / 58 (b  3, c  3, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  6.6         det  74 vs  58 /138 (b 22, c  6, p 0.0037 Holm 0.0112) | FA   5 vs   5 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.6         det  72 vs  59 /138 (b 21, c  8, p 0.0241 Holm 0.0482) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+       -3 => SUPPORTED
+         -6 exact t  5.1         det  65 vs  57 /138 (b 20, c 12, p 0.2153 Holm 0.2153) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2V | prior E1 (sensitivity) | seed 2 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.7         det 101 vs  69 /138 (b 39, c  7, p 0.0000 Holm 0.0000) | FA   8 vs   8 / 58 (b  7, c  7, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.6         det  92 vs  68 /138 (b 30, c  6, p 0.0001 Holm 0.0003) | FA   8 vs   8 / 58 (b  5, c  5, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.5         det  89 vs  64 /138 (b 30, c  5, p 0.0000 Holm 0.0001) | FA   4 vs   4 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  7.3         det  75 vs  56 /138 (b 24, c  5, p 0.0005 Holm 0.0016) | FA   1 vs   1 / 58 (b  1, c  1, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.3         det  70 vs  62 /138 (b 16, c  8, p 0.1516 Holm 0.3032) | FA   3 vs   3 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 lower t  4.8         det  64 vs  60 /138 (b 19, c 15, p 0.6076 Holm 0.6076) | FA   6 vs   4 / 58 (b  4, c  2, p 0.6875) | FA Holm 1.0000 | not supported
+         -6 upper t  4.7         det  64 vs  63 /138 (b 18, c 17, p 1.0000 Holm 1.0000) | FA   6 vs   7 / 58 (b  4, c  5, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2 | prior E1 (sensitivity) | seed 1 | M2 exact match, 0.1 dB grid ===
+      clean lower t  9.2         det 105 vs  65 /138 (b 42, c  2, p 0.0000 Holm 0.0000) | FA   7 vs   6 / 58 (b  6, c  5, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+      clean upper t  9.1         det 105 vs  65 /138 (b 42, c  2, p 0.0000 Holm 0.0000) | FA   7 vs   8 / 58 (b  6, c  7, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.3         det  91 vs  69 /138 (b 27, c  5, p 0.0001 Holm 0.0005) | FA   9 vs   9 / 58 (b  6, c  6, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.3         det  89 vs  64 /138 (b 31, c  6, p 0.0000 Holm 0.0002) | FA   5 vs   5 / 58 (b  3, c  3, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  6.6         det  74 vs  58 /138 (b 22, c  6, p 0.0037 Holm 0.0112) | FA   5 vs   5 / 58 (b  4, c  4, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 lower t  5.8         det  72 vs  58 /138 (b 21, c  7, p 0.0125 Holm 0.0251) | FA   2 vs   1 / 58 (b  2, c  1, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+         -3 upper t  5.7         det  72 vs  58 /138 (b 21, c  7, p 0.0125 Holm 0.0251) | FA   2 vs   3 / 58 (b  2, c  3, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+       -3 => SUPPORTED
+         -6 exact t  5.1         det  65 vs  58 /138 (b 19, c 12, p 0.2810 Holm 0.2810) | FA   2 vs   2 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== TABLE 2 | comparator C2 | prior E1 (sensitivity) | seed 2 | M2 exact match, 0.1 dB grid ===
+      clean exact t  8.7         det 101 vs  69 /138 (b 39, c  7, p 0.0000 Holm 0.0000) | FA   8 vs   8 / 58 (b  7, c  7, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+    clean => SUPPORTED
+          6 exact t  7.6         det  92 vs  69 /138 (b 29, c  6, p 0.0001 Holm 0.0005) | FA   8 vs   8 / 58 (b  5, c  5, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        6 => SUPPORTED
+          3 exact t  7.5         det  89 vs  64 /138 (b 30, c  5, p 0.0000 Holm 0.0001) | FA   4 vs   4 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        3 => SUPPORTED
+          0 exact t  7.3         det  75 vs  56 /138 (b 24, c  5, p 0.0005 Holm 0.0016) | FA   1 vs   1 / 58 (b  1, c  1, p 1.0000) | FA Holm 1.0000 | SUPPORTED
+        0 => SUPPORTED
+         -3 exact t  5.6         det  70 vs  59 /138 (b 19, c  8, p 0.0522 Holm 0.1045) | FA   3 vs   3 / 58 (b  2, c  2, p 1.0000) | FA Holm 1.0000 | not supported
+       -3 => not supported
+         -6 lower t  4.8         det  64 vs  61 /138 (b 18, c 15, p 0.7283 Holm 0.7283) | FA   6 vs   4 / 58 (b  4, c  2, p 0.6875) | FA Holm 1.0000 | not supported
+         -6 upper t  4.7         det  64 vs  64 /138 (b 17, c 17, p 1.0000 Holm 1.0000) | FA   6 vs   7 / 58 (b  4, c  5, p 1.0000) | FA Holm 1.0000 | not supported
+       -6 => not supported
+
+=== PER DATASET, clean, C2-V and C2, prior E2, exact-match threshold of the pooled row (unadjusted, exploratory) ===
+    C2V  s1 CWRU      exact t  8.9 det  32 vs  20 / 36 (b 12, c  0, p 0.0005) | FA   0 vs   0 /  4 (b  0, c  0, p 1.0000)
+    C2V  s1 Paderborn exact t  8.9 det  32 vs  27 / 46 (b  8, c  3, p 0.2266) | FA   0 vs   6 / 12 (b  0, c  6, p 0.0312)
+    C2V  s1 MFPT      exact t  8.9 det  17 vs  17 / 17 (b  0, c  0, p 1.0000) | FA   0 vs   0 /  3 (b  0, c  0, p 1.0000)
+    C2V  s1 XJTU      exact t  8.9 det  24 vs   4 / 39 (b 20, c  0, p 0.0000) | FA   7 vs   1 / 39 (b  6, c  0, p 0.0312)
+    C2V  s2 CWRU      exact t  8.7 det  32 vs  21 / 36 (b 12, c  1, p 0.0034) | FA   1 vs   0 /  4 (b  1, c  0, p 1.0000)
+    C2V  s2 Paderborn exact t  8.7 det  31 vs  28 / 46 (b  9, c  6, p 0.6072) | FA   0 vs   7 / 12 (b  0, c  7, p 0.0156)
+    C2V  s2 MFPT      exact t  8.7 det  17 vs  17 / 17 (b  0, c  0, p 1.0000) | FA   0 vs   0 /  3 (b  0, c  0, p 1.0000)
+    C2V  s2 XJTU      exact t  8.7 det  21 vs   4 / 39 (b 17, c  0, p 0.0000) | FA   7 vs   1 / 39 (b  6, c  0, p 0.0312)
+    C2   s1 CWRU      exact t  8.9 det  32 vs  20 / 36 (b 12, c  0, p 0.0005) | FA   0 vs   0 /  4 (b  0, c  0, p 1.0000)
+    C2   s1 Paderborn exact t  8.9 det  32 vs  27 / 46 (b  8, c  3, p 0.2266) | FA   0 vs   6 / 12 (b  0, c  6, p 0.0312)
+    C2   s1 MFPT      exact t  8.9 det  17 vs  17 / 17 (b  0, c  0, p 1.0000) | FA   0 vs   0 /  3 (b  0, c  0, p 1.0000)
+    C2   s1 XJTU      exact t  8.9 det  24 vs   4 / 39 (b 20, c  0, p 0.0000) | FA   7 vs   1 / 39 (b  6, c  0, p 0.0312)
+    C2   s2 CWRU      exact t  8.7 det  32 vs  21 / 36 (b 12, c  1, p 0.0034) | FA   1 vs   0 /  4 (b  1, c  0, p 1.0000)
+    C2   s2 Paderborn exact t  8.7 det  31 vs  28 / 46 (b  9, c  6, p 0.6072) | FA   0 vs   7 / 12 (b  0, c  7, p 0.0156)
+    C2   s2 MFPT      exact t  8.7 det  17 vs  17 / 17 (b  0, c  0, p 1.0000) | FA   0 vs   0 /  3 (b  0, c  0, p 1.0000)
+    C2   s2 XJTU      exact t  8.7 det  21 vs   4 / 39 (b 17, c  0, p 0.0000) | FA   7 vs   1 / 39 (b  6, c  0, p 0.0312)
+
+=== OTTAWA A (50 files; descriptive) ===
+    C2V  E2 s1 exact t 5.7       det  25 vs  26 / 30 (b  1, c  2, p 1.0000) | FA  12 vs  12 / 20 (b  4, c  4, p 1.0000)
+    C2V  E2 s2 lower t 5.7       det  25 vs  26 / 30 (b  1, c  2, p 1.0000) | FA  13 vs  12 / 20 (b  4, c  3, p 1.0000)
+    C2V  E2 s2 upper t 5.6       det  25 vs  27 / 30 (b  0, c  2, p 0.5000) | FA  13 vs  14 / 20 (b  3, c  4, p 1.0000)
+    C2   E2 s1 exact t 5.8       det  25 vs  27 / 30 (b  1, c  3, p 0.6250) | FA  12 vs  12 / 20 (b  3, c  3, p 1.0000)
+    C2   E2 s2 exact t 5.7       det  25 vs  27 / 30 (b  1, c  3, p 0.6250) | FA  13 vs  13 / 20 (b  3, c  3, p 1.0000)
+    C2V  E1 s1 exact t 3.9       det  25 vs  30 / 30 (b  0, c  5, p 0.0625) | FA  12 vs  12 / 20 (b  6, c  6, p 1.0000)
+    C2V  E1 s2 exact t 3.7       det  25 vs  30 / 30 (b  0, c  5, p 0.0625) | FA  13 vs  13 / 20 (b  5, c  5, p 1.0000)
+    C2   E1 s1 exact t 6.0       det  25 vs  27 / 30 (b  1, c  3, p 0.6250) | FA  12 vs  12 / 20 (b  4, c  4, p 1.0000)
+    C2   E1 s2 exact t 5.8       det  25 vs  27 / 30 (b  1, c  3, p 0.6250) | FA  13 vs  13 / 20 (b  3, c  3, p 1.0000)
+
+READING (fixed in the task file; prior E2, exact matching; decision rows clean, +6, +3, both seeds):
+  C2V: clean: s1 SUPPORTED, s2 SUPPORTED | 6: s1 SUPPORTED, s2 SUPPORTED | 3: s1 SUPPORTED, s2 SUPPORTED -> PASS: the gain holds against a pre-whitened envelope comparator
+  C2: clean: s1 SUPPORTED, s2 SUPPORTED | 6: s1 SUPPORTED, s2 SUPPORTED | 3: s1 SUPPORTED, s2 SUPPORTED -> PASS: the gain holds against a pre-whitened envelope comparator
